@@ -1,68 +1,35 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ERP Tool Demo
 
-## Available Scripts
+Activity Tracker page of an ERP Tool(Demo) that can show how long an employee was 'Active' on a given work day. I am using Create-React-App CLI to build this and also using Mock API(Mocky.io) to fetch necessary data. The 3rd party libraries used in this project are,
 
-In the project directory, you can run:
+1. [Axios](https://www.npmjs.com/package/axios)
+This package is included to fetch the employee data(Mock Data in my case).
 
-### `npm start`
+2. [Reactjs-Popup](https://www.npmjs.com/package/reactjs-popup)
+This is a great all in one library to add tooltips, modals and menus. This library offers good levels of customization as well. I have added this library to implement Modals in my page.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3. [React-Datepicker](https://www.npmjs.com/package/react-datepicker)
+As the name suggests this is a great datepicker. Since this project deals with dates and date-ranges, I have added this library to make the development process easier. This also offers good levels of customization.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+4. [React-Circular-Progressbar](https://www.npmjs.com/package/react-circular-progressbar)
+Although I could have done without this library, I still chose to include this just to make the UI a bit more interactive.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Component Architecture
 
-### `npm run build`
+![Component Architecture](https://i.imgur.com/Ovr9wmT.jpg)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## About
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+This is a Demo Project showing an user's/employee's activity or active time for a particular date. The activity can also be checked selectively by entering a date range. The dashboard will display the number of hours/minutes the person was active for a particular date. For the purpose of this project we are using mock data fetched from Mocky.io. Finally the build of this project is uploaded to Netlify(_Link below_) so that it can accessed publicly. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Installation Steps:
+1. Clone the Repo.
+2. Run 'npm install' to install all the necessary packages.
+3. Run 'npm start' to serve it localhost and run locally by entering localhost:3000 in your browser.
+4. Enjoy!
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Alternatively use this link to view the project online.
+[ERP-DEMO](https://erp-demo.netlify.app/)

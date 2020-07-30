@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* ---------------CSS For App.js Component--------------- */
+
+.sidebar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  background-color: #008080;
+  color: #333333;
+}
+
+.content-container {
+  margin-left: 200px;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  border-bottom: solid 1px #999;
+}
+
+.userCard-container {
+  display: flex;
+}
+
+/* ---------------CSS For UserCard.js Component--------------- */
+
+.userCard {
+  width: 250px;
+  height: 150px;
+  margin: 25px;
+  -webkit-box-shadow: 0px 0px 7px 1px rgba(0, 128, 128, 1);
+  -moz-box-shadow: 0px 0px 7px 1px rgba(0, 128, 128, 1);
+  box-shadow: 0px 0px 7px 1px rgba(0, 128, 128, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+.userCard:hover {
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 128, 128, 1);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(0, 128, 128, 1);
+  box-shadow: 0px 0px 10px 3px rgba(0, 128, 128, 1);
+}
+
+.userCard img {
+  margin-bottom: 5px;
+}
+
+/* ---------------CSS For UserDetails.js Component--------------- */
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.close-button {
+  margin-top: 20px;
+  width: 100px;
+  height: 50px;
+  border-radius: 0;
+  border: none;
+  outline: none;
+  color: #f4f4f4;
+  background-color: #008080;
+  font-size: 18px;
+}
+.close-button:hover {
+  background-color: #00bbbb;
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.75);
+}
+
+.modal-header {
+  height: 75px;
+  border-bottom: 1px solid #999;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sub-header h4 {
+  margin: 0px 10px;
+}
+
+/* ---------------CSS For UserActivity.js Component--------------- */
+
+.eachActivity {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 500px;
+  height: 70px;
+  margin: 10px 0px;
+}
+.eachActivity:hover {
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.75);
+}
+
+.CircularProgressbar {
+  width: 50px;
+  height: 50px;
+  width: 15% !important;
+}
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: #008080 !important;
+}
+.CircularProgressbar-text {
+  font-size: 25px !important;
+  font-weight: 500 !important;
+  fill: #333 !important;
+}

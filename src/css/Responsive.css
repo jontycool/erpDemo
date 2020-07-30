@@ -1,0 +1,109 @@
+@media only screen and (max-width: 575px) {
+  .sidebar-container {
+    height: 100%;
+    width: 150px;
+  }
+
+  .content-container {
+    margin-left: 150px;
+    padding: 10px;
+  }
+
+  .header h2 {
+    font-size: 22px;
+  }
+
+  .userCard-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-container img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .links a {
+    width: 120px;
+    padding: 10px 15px 10px 15px;
+    font-size: 16px;
+  }
+
+  .userCard {
+    width: 175px;
+    margin: 25px 10px;
+  }
+
+  .userCard h4 {
+    font-size: 14px;
+  }
+
+  .popup-content {
+    width: 80% !important;
+    margin: auto !important;
+  }
+
+  .userDetails {
+    padding: 10px;
+    width: 270px;
+  }
+
+  .close-button {
+    width: 75px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .modal-header {
+    margin-bottom: 3px;
+  }
+
+  .modal-header h2 {
+    font-size: 20px;
+  }
+
+  .sub-header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .sub-header h4 {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .date-selector {
+    width: 250px;
+    flex-direction: column;
+    margin-bottom: 5px;
+  }
+
+  .date-selector .react-datepicker-wrapper {
+    margin: 3px;
+  }
+
+  .modal-activity {
+    overflow-y: visible;
+  }
+
+  .eachActivity {
+    flex-direction: column;
+    width: 250px;
+    height: 100px;
+    padding: 5px 0px;
+  }
+
+  .CircularProgressbar {
+    width: 50% !important;
+  }
+
+  .firstLine {
+    flex-direction: column;
+  }
+
+  .secondLine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

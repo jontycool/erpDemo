@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './css/Main.css';
+import './css/Responsive.css';
 import Sidebar from './components/Sidebar';
 import axios from 'axios';
 import UserCard from './components/UserCard';

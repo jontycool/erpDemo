@@ -14,6 +14,9 @@
   width: 200px;
   background-color: #008080;
   color: #333333;
+  -webkit-box-shadow: 2px 0px 2px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 0px 2px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 0px 2px 1px rgba(0, 0, 0, 0.75);
 }
 
 .content-container {
@@ -31,6 +34,50 @@
 
 .userCard-container {
   display: flex;
+  justify-content: center;
+}
+
+/* ---------------CSS For Sidebar.js Component--------------- */
+
+.sidebar-main {
+  padding: 25px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 400px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.links a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  width: 160px;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 20px 10px 20px;
+}
+.links a:hover {
+  background-color: #00bbbb;
+}
+
+.active {
+  background-color: #005959;
 }
 
 /* ---------------CSS For UserCard.js Component--------------- */
@@ -66,6 +113,7 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
+  background-color: #f4f4f4;
 }
 
 .close-button {
@@ -106,6 +154,32 @@
   margin: 0px 10px;
 }
 
+.date-selector {
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.date-selector .react-datepicker-wrapper {
+  margin: 10px;
+}
+
+.react-datepicker__input-container {
+  width: 80% !important;
+}
+.react-datepicker__input-container input {
+  border-radius: 0 !important;
+  padding: 10px !important;
+  border: none;
+  -webkit-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+}
+.react-datepicker__input-container input:focus {
+  outline: none;
+  border: none;
+}
 /* ---------------CSS For UserActivity.js Component--------------- */
 
 .eachActivity {

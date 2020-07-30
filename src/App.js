@@ -12,7 +12,6 @@ function App() {
       const result = await axios(
         'https://run.mocky.io/v3/91ac29cb-dbd3-4340-bcc9-0bf1faf76e58'
       );
-      console.log(result);
       setData(result.data.members);
     }
 

@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import UserActivity from './UserActivity';
+import DatePicker from 'react-datepicker';
+
+import 'react-datepicker/dist/react-datepicker.css';
 
 class UserDetails extends Component {
   state = {
@@ -38,11 +41,26 @@ class UserDetails extends Component {
       ':' +
       mm;
 
-    console.log(formattedDate);
     return formattedDate;
   };
 
   render() {
+    const activity = this.state.userData.activity_periods;
+    var filteredDates = [];
+    if (
+      activity.length !== 0 &&
+      this.state.startDate !== null &&
+      this.state.endDate !== null
+    ) {
+      filteredDates = activity.filter((a) => {
+        var rangeStart = new Date(this.state.startDate);
+        var rangeEnd = new Date(this.state.endDate);
+        var start = new Date(this.calculateDate(a.start_time));
+        var end = new Date(this.calculateDate(a.end_time));
+        return start > rangeStart && end < rangeEnd;
+      });
+    }
+
     return (
       <div className='userDetails'>
         <div className='modal-header'>
@@ -53,20 +71,58 @@ class UserDetails extends Component {
           </div>
         </div>
 
+        <div className='date-selector'>
+          <DatePicker
+            selected={this.state.startDate}
+            onChange={(date) =>
+              this.setState({
+                startDate: date,
+              })
+            }
+            selectsStart
+            startDate={this.state.startDate}
+            endDate={this.state.endDate}
+            closeOnScroll={true}
+            placeholderText='Enter Start Date'
+            dateFormat='dd/MM/yyyy'
+            showMonthDropdown
+            showYearDropdown
+          />
+          <DatePicker
+            selected={this.state.endDate}
+            onChange={(date) => this.setState({ endDate: date })}
+            selectsEnd
+            startDate={this.state.startDate}
+            endDate={this.state.endDate}
+            minDate={this.state.startDate}
+            closeOnScroll={true}
+            dateFormat='dd/MM/yyyy'
+            placeholderText='Enter End Date'
+            showMonthDropdown
+            showYearDropdown
+          />
+        </div>
+
         <div className='modal-activity'>
-          {this.state.startDate === null ? (
-            this.state.userData.activity_periods.map((period, i) => {
-              return (
-                <UserActivity
-                  key={i}
-                  start={this.calculateDate(period.start_time)}
-                  end={this.calculateDate(period.end_time)}
-                />
-              );
-            })
-          ) : (
-            <h1>Start Date Populated!</h1>
-          )}
+          {this.state.endDate === null && this.state.startDate === null
+            ? this.state.userData.activity_periods.map((period, i) => {
+                return (
+                  <UserActivity
+                    key={i}
+                    start={this.calculateDate(period.start_time)}
+                    end={this.calculateDate(period.end_time)}
+                  />
+                );
+              })
+            : filteredDates.map((period, i) => {
+                return (
+                  <UserActivity
+                    key={i}
+                    start={this.calculateDate(period.start_time)}
+                    end={this.calculateDate(period.end_time)}
+                  />
+                );
+              })}
         </div>
 
         <button onClick={this.props.onClick} className='close-button'>
